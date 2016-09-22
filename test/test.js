@@ -1,3 +1,4 @@
+var request = require('supertest');
 var assert = require('assert');
 describe('whats-app-api', function() {
   describe('/register', function() {
