@@ -1,0 +1,26 @@
+{
+  "name": "instant-lawyer",
+  "version": "1.0.0",
+  "description": "Connect with your clients in a whole new way.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "supertest": "^2.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oceanhouse21/instant-lawyer.git"
+  },
+  "author": "Georg Schlenkhoff <georg@oceanhouse21.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oceanhouse21/instant-lawyer/issues"
+  },
+  "homepage": "https://github.com/oceanhouse21/instant-lawyer#readme"
+}
