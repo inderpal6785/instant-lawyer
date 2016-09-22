@@ -9,7 +9,9 @@
   "dependencies": {
     "supertest": "^2.0.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "supertest": "^2.0.0"
+  },
   "scripts": {
     "test": "mocha"
   },
