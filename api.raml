@@ -1,0 +1,94 @@
+#%RAML 0.8
+title: yowsup-gateway
+version: 1.0.0
+baseUri: http://46.101.213.142
+
+/accounts:
+  post:
+    description: Create new WhatsApp account
+    responses:
+      200:
+        body:
+          application/json:
+            example: |
+              {
+                "status": "ok"
+              }
+    queryParameters:
+      number:
+        displayName: Number
+        type: string
+        description: A number associated with WhatsApp account
+        example: 4915120038495
+        required: true
+      cc:
+        displayName: Country Code
+        type: string
+        description: Country code. See http://www.ipipi.com/help/telephone-country-codes.htm
+        example: 49
+        required: true
+      mcc:
+        displayName: Mobile Country Code.
+        type: string
+        description: Mobile Country Code. Check your mcc here https://en.wikipedia.org/wiki/Mobile_country_code
+        example: 262
+        required: true
+      mnc:
+        displayName: Mobile Network Code
+        type: string
+        description: Mobile Network Code. Check your mnc from https://en.wikipedia.org/wiki/Mobile_country_code
+        example: 02
+        required: true
+  get:
+    description: Get your WhatsApp account
+  delete:
+    description: Permanently delete your account
+    queryParameters:
+      number:
+        displayName: WhatsApp number
+        type: string
+        description: Your WhatsApp number
+        example: 4915120038495
+        required: true
+/messages:
+  post:
+    description: Send new message to a phone number
+    queryParameters:
+      message:
+        displayName: Message
+        type: string
+        description: Message to be sent to recipient
+        example: Hello my dear friend!
+        required: true
+      number:
+        displayName: Number
+        type: string
+        description: Full number of recipient including the country code, without preceeding '+' or '00'
+        example: 4917020234539
+        required: true
+  get:
+    description: Get unread messages
+/profiles:
+  get:
+    description: Get profile
+  put:
+    description: Update profile
+    queryParameters:
+      name:
+        displayName: Name
+        type: string
+        description: Your full name
+        example: John Doe
+        required: true
+      image:
+        displayName: Image url
+        type: string
+        description: An URL to your profile image
+        example: http://facebook.com/profiles/yourimage.png
+        required: false
+      status:
+        displayName: Status
+        type: string
+        description: Your status message
+        example: Hey, I'm always on.
+        required: false

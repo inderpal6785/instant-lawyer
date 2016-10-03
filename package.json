@@ -4,7 +4,7 @@
   "description": "Connect with your clients in a whole new way.",
   "main": "index.js",
   "directories": {
-    "test": "test"
+    "test": "abao api.raml"
   },
   "scripts": {
     "test": "mocha"
