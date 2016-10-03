@@ -1,1 +1,1 @@
-# instant-lawyer
+[![Build Status](https://travis-ci.org/oceanhouse21/instant-lawyer.svg?branch=master)](https://travis-ci.org/oceanhouse21/instant-lawyer)# instant-lawyer
